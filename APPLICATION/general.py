@@ -19,7 +19,6 @@ class General(commands.Cog):
         embed.add_field(name="!update", value="*Update your roles if you get promoted"
                                               "\nOnly works inside Bootleg Scrims*", inline=False)
         embed.add_field(name="!dev", value="*Displays developer information*", inline=False)
-        embed.add_field(name="*total roles applied*", value="**{}**".format(h.total_roles_assigned()))
         embed.set_footer(text="developed by goose#4609 · !dev",
                          icon_url="https://cdn.discordapp.com/avatars/"
                                   "293658485210480640/067f4917d73fafde6855e40e79055067.webp?size=1024")
