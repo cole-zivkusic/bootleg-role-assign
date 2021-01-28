@@ -3,7 +3,6 @@
 import discord
 from discord.ext import commands
 from discord.utils import get
-import helper as h
 
 
 class Update(commands.Cog):
@@ -44,7 +43,6 @@ class Update(commands.Cog):
                     role = get(server.roles, name="T1")
                     if ctx.author not in role.members:
                         await ctx.author.add_roles(role)
-                        h.roles_assigned(1)
                         count += 1
                 elif s == t2t3:
                     special_case = self.bot.get_guild(s)
@@ -55,17 +53,14 @@ class Update(commands.Cog):
                     role3 = get(server.roles, name="T3")
                     if ctx.author in sc_role2.members and ctx.author not in role2.members:
                         await ctx.author.add_roles(role2)
-                        h.roles_assigned(1)
                         count += 1
                     elif ctx.author in sc_role3.members and ctx.author not in role3.members:
                         await ctx.author.add_roles(role3)
-                        h.roles_assigned(1)
                         count += 1
                 elif s == elite:
                     role = get(server.roles, name="Elite")
                     if ctx.author not in role.members:
                         await ctx.author.add_roles(role)
-                        h.roles_assigned(1)
                         count += 1
         # if they were given a role display a message
         if count > 0:
