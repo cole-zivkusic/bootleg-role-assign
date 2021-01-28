@@ -2,7 +2,6 @@
 
 import discord
 from discord.ext import commands
-import helper as h
 
 
 class General(commands.Cog):
