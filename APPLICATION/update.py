@@ -79,7 +79,7 @@ class Update(commands.Cog):
                              icon_url="https://cdn.discordapp.com/avatars/"
                                       "293658485210480640/067f4917d73fafde6855e40e79055067.webp?size=1024")
             await ctx.send(embed=embed)
-
+    '''
     # an error handler in the case where something goes wrong (ie. an admin has changed a roles name, etc.)
     @update.error
     async def update_error(self, ctx, error):
@@ -87,7 +87,7 @@ class Update(commands.Cog):
             embed = discord.Embed(title="Error ❌", color=0xff7b00)
             embed.add_field(name="Something Went Wrong...", value="please DM goose#4609 for help")
             await ctx.send(embed=embed)
-
+    '''
 
 def setup(bot):
     bot.add_cog(Update(bot))
