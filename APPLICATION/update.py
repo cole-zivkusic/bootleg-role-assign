@@ -38,7 +38,8 @@ class Update(commands.Cog):
         # check to see if the user is in the three servers that have signifigant roles in Scrims
         # if they are, apply the role in question inside Scrims if they do not already have it
         for s in servers:
-            if s.get_member(ctx.author.id) is not None:
+            serv = self.bot.get_guild(s)
+            if serv.get_member(ctx.author.id) is not None:
                 if s == prac:
                     role = get(server.roles, name="T1")
                     if ctx.author not in role.members:
