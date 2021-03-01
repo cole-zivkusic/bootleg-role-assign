@@ -16,11 +16,12 @@ class Update(commands.Cog):
     async def update(self, ctx):
         # variable for keeping track of roles applied on a per use basis
         count = 0
-        # the four server ids that this bot will work out of
+        # the five server ids that this bot will work out of
         prac = 720914029362675774
-        t2t3 = 756216339265224714
+        t2 = 756216339265224714
         elite = 769244576292536391
         scrims = 756772868888461423
+        t3 = 770718028593758238
         # check to see that the command was called in Bootleg Scrims
         # send a message and return if it was called outside of Scrims
         if ctx.message.guild.id != scrims:
@@ -32,7 +33,7 @@ class Update(commands.Cog):
             await ctx.send(embed=embed)
             return
 
-        servers = [prac, t2t3, elite]
+        servers = [prac, t2, t3, elite]
 
         server = self.bot.get_guild(scrims)
         # check to see if the user is in the three servers that have signifigant roles in Scrims
@@ -45,18 +46,15 @@ class Update(commands.Cog):
                     if ctx.author not in role.members:
                         await ctx.author.add_roles(role)
                         count += 1
-                elif s == t2t3:
-                    special_case = self.bot.get_guild(s)
-                    sc_role2 = get(special_case.roles, name="T2")
-                    sc_role3 = get(special_case.roles, name="T3")
-
-                    role2 = get(server.roles, name="T2")
-                    role3 = get(server.roles, name="T3")
-                    if ctx.author in sc_role2.members and ctx.author not in role2.members:
-                        await ctx.author.add_roles(role2)
+                elif s == t2:
+                    role = get(server.roles, name="T2")
+                    if ctx.author not in role.members:
+                        await ctx.author.add_roles(role)
                         count += 1
-                    elif ctx.author in sc_role3.members and ctx.author not in role3.members:
-                        await ctx.author.add_roles(role3)
+                elif s == t3:
+                    role = get(server.roles, name="T3")
+                    if ctx.author not in role.members:
+                        await ctx.author.add_roles(role)
                         count += 1
                 elif s == elite:
                     role = get(server.roles, name="Elite")
