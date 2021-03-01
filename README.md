@@ -11,7 +11,9 @@ Created to ease the duties of moderators, since they were constantly finding the
 ```
 Current user count: 11,000+
 ```
-</br>
+
+## Tools
+
 Developed using Python, and the discord.py library to interface the Discord API</br>
 </br>
 Hosted and deployed via Heroku</br>
