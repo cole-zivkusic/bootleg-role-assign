@@ -9,7 +9,7 @@ Bootleg Role Assign allows users to update their roles inside of said large disc
 Created to ease the duties of moderators, since they were constantly finding themselves having to manually update individual members roles</br>
 </br>
 ```
-Current user count: 11,000+</br>
+Current user count: 11,000+
 ```
 </br>
 Developed using Python, and the discord.py library to interface the Discord API</br>
