@@ -9,7 +9,7 @@ class General(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    # displays the bots command information & the total number of roles applied
+    # displays the bots command information
     @commands.command()
     async def roleinfo(self, ctx):
         url = self.bot.user.avatar_url
