@@ -18,7 +18,7 @@ class Update(commands.Cog):
         count = 0
         # the five server ids that this bot will work out of
         prac = 720914029362675774
-        t2 = 756216339265224714
+        t2 = 865536371493830666
         elite = 769244576292536391
         scrims = 756772868888461423
         t3 = 770718028593758238
